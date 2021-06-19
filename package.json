@@ -1,0 +1,53 @@
+{
+    "name": "qrcodegen",
+    "version": "1.0.0",
+    "displayName": "QR Code Generator",
+    "publisher": "Seemon",
+    "description": "Generate QR Code for a selected text",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "icon": "assets/logo.png",
+    "activationEvents": [
+        "onCommand:qrcodegen.generate"
+    ],
+    "main": "./src/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "qrcodegen.generate",
+                "title": "Generate QR Code"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "qrcodegen.generate",
+                    "title": "Generate QR Code"
+                }
+            ]
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mattseemon/vscode-qrcodegen.git"
+    },
+    "keywords": [
+        "vscode",
+        "qrcode",
+        "generator"
+    ],
+    "author": "Matt Seemon",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mattseemon/vscode-qrcodegen/issues"
+    },
+    "homepage": "https://github.com/mattseemon/vscode-qrcodegen#readme",
+    "dependencies": {
+        "q": "^1.5.1",
+        "qrcode": "^1.4.4"
+    }
+}
